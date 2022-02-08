@@ -1,0 +1,18 @@
+.communication-parent {
+	position: absolute;
+	display: inline-block;
+	top: 30%;
+	left: 7%;
+    background-color: white;
+    width: 80%;
+    margin: 10px auto;
+    padding: 15px;
+}
+
+.communication-parent table { border-collapse: collapse; width: 100%; }
+
+.communication-parent table {  border: 1px solid black; }
+
+.communication-parent th {	border: 1px solid black; }
+
+.communication-parent td {	border: 1px solid black; }

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+
+		<title>GoNavy!</title>
+
+		<meta charset="utf-8">	
+
+		<link rel="icon" href="../../IMAGES/Tab_Icon/icon.PNG">
+
+		<link rel="stylesheet" type="text/css" href="../../CSS/Common/background.css?v=2">
+		<link rel="stylesheet" type="text/css" href="../../CSS/Common/header.css?v=3">
+		<link rel="stylesheet" type="text/css" href="../../CSS/Common/div_switch_pages.css?v=7">
+		<link rel="stylesheet" type="text/css" href="../../CSS/Watchbill/watchbill.css?v=10">
+
+		<script type="text/javascript" src="../../JAVASCRIPT/Jquery/Jquery.js"></script>
+		<script type="text/javascript" src="../../JAVASCRIPT/Headers/page_header.js?v=6"></script>
+		<script type="text/javascript" src="../../JAVASCRIPT/Headers/page_redirect_bar.js?v=8"></script>		
+		<script type="text/javascript" src="../../JAVASCRIPT/Switch_Pages/Switch_Pages.js"></script>
+		<script type="text/javascript" src="../../JAVASCRIPT/Switch_Pages/Switch_Pages_Watchbill.js"></script>
+		<script type="text/javascript" src="../../JAVASCRIPT/Moment/moment.min.js"></script><!--Moment.js Library-->
+		<script type="text/javascript" src="../../JAVASCRIPT/Knockout/knockout-3.5.1.js"></script><!--Watchbill-->
+		<script type="text/javascript" src="../../JAVASCRIPT/Watchbill/watchbill.js"></script><!--Watchbill-->
+		
+	</head>
+	
+	<body>
+
+		<!--Content-->
+		<div class="watchbill-parent">
+			Select Week 
+			<input type="week" data-bind='value: week' />
+			<table>
+				<thead>
+					<tr>
+						<td>Duty</td>
+						<td>Shift</td>
+						<td>Monday</td>
+						<td>Tuesday</td>
+						<td>Wednesday</td>
+						<td>Thursday</td>
+						<td>Friday</td>
+						<td>Saturday</td>
+						<td>Sunday</td>
+					</tr>
+				</thead>
+				<tbody data-bind='foreach: entries'>
+					<tr>
+						<td data-bind='text: duty'></td>
+						<td data-bind='text: shift'></td>
+						<td data-bind='text: monday'></td>
+						<td data-bind='text: tuesday'></td>
+						<td data-bind='text: wednesday'></td>
+						<td data-bind='text: thursday'></td>
+						<td data-bind='text: friday'></td>
+						<td data-bind='text: saturday'></td>
+						<td data-bind='text: sunday'></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+
+	</body>
+
+</html>

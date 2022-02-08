@@ -1,0 +1,36 @@
+
+#switch_pages{
+	position: absolute;	display: inline-block; text-align: center;
+	top: 15%; width: 100%; height: 55px;
+	background: rgb(71,94,110);
+	background: linear-gradient(0deg, rgba(71,94,110,0.7346288857339811) 0%, rgba(40,52,60,0.9026961126247374) 16%, rgba(31,40,46,0.9783263647255778) 19%, rgba(20,25,28,0.9475140397956058) 81%, rgba(40,52,60,0.8382703423166141) 83%, rgba(71,94,110,0.8970938717283788) 96%);
+}
+
+#switch_pages img{	width: 15px;  height: 15px; pointer-events: none; }
+
+#switch_pages p{ pointer-events: none; }
+
+#switch_pages button{
+	border-radius: 20%;  height: 50px;  padding-left: 15px;
+	background-color: #0CAE62;	border-color: transparent;
+	cursor: pointer;
+}
+
+#switch_pages table{  margin: 0 auto;  }
+
+#switch_pages #b_home{	width: 100px;  }
+
+#switch_pages #b_training{  width: 110px;  }
+
+#switch_pages #b_chits{  width: 90px;  }
+
+#switch_pages #b_leadership{  width: 120px;  }
+
+#switch_pages #b_communication{  }
+
+#switch_pages #b_watchbill{  }	
+
+#switch_pages #b_calendar{  }
+
+#switch_pages #b_documents{  }
+

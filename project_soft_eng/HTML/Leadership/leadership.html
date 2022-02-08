@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+
+		<title>GoNavy!</title>
+
+		<meta charset="utf-8">	
+
+		<link rel="icon" href="../../IMAGES/Tab_Icon/icon.PNG">
+
+		<link rel="stylesheet" type="text/css" href="../../CSS/Common/background.css?v=2">
+		<link rel="stylesheet" type="text/css" href="../../CSS/Common/header.css?v=3">
+		<link rel="stylesheet" type="text/css" href="../../CSS/Common/div_switch_pages.css?v=6">
+		<link rel="stylesheet" type="text/css" href="../../CSS/Leadership/leadership.css?v=3">
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+		<script type="text/javascript" src="../../JAVASCRIPT/Jquery/Jquery.js"></script>
+		<script type="text/javascript" src="../../JAVASCRIPT/Headers/page_header.js"></script>
+		<script type="text/javascript" src="../../JAVASCRIPT/Headers/page_redirect_bar.js?v=3"></script>
+		<script type="text/javascript" src="../../JAVASCRIPT/Switch_Pages/Switch_Pages.js"></script>
+		<script type="text/javascript" src="../../JAVASCRIPT/Switch_Pages/Switch_Pages_Leadership.js"></script>
+		<script type="text/javascript" src="../../JAVASCRIPT/Knockout/knockout-3.5.1.js"></script>
+		<script type="text/javascript" src="../../JAVASCRIPT/Leadership/leadership.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		
+	</head>	
+	<body>
+
+		<!--Content-->
+		<div class="leadership-parent">
+
+			<table>
+				<thead>
+					<tr>
+						<td>Actions</td>
+						<td>Student</td>
+						<td>AID</td>
+						<td>Status</td>
+						<td>OI</td>
+						<td>Command Billet</td>
+						<td>Collateral Billet</td>
+					</tr>
+				</thead>
+				<tbody data-bind='foreach: entries'>
+					<tr>
+						<td><a href="#" data-bind='click: $root.viewUser'>View</a> / <a href="#" data-bind='click: $root.resetPassword'>Reset Password</a></td>
+						<td data-bind='text: name'></td>
+						<td data-bind='text: aid'></td>
+						<td data-bind='text: status'></td>
+						<td data-bind='text: OI'></td>
+						<td data-bind='text: commandBillet'></td>
+						<td data-bind='text: collateralBillet'></td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+
+		<!--Reset Password Modal-->
+		<div id="dialog-message" title="Reset Password">
+			<p>
+				Resetting password for <span data-bind="text: resetUsername"></span>
+			</p>
+			<p>
+				New Password: <input type="password" data-bind="value: resetNewPassword" />
+			</p>
+		</div>
+
+
+		<!--Imposture Modal-->
+		<div id="dialog-imposture" title="View Profile">
+			<iframe id="imposture-iframe" src="/"></iframe>
+		</div>
+
+
+	</body>
+
+</html>

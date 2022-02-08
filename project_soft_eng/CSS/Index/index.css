@@ -1,0 +1,62 @@
+:root{
+	--background_shade: #28343C;  --first_layer: #04DC77;
+	--button_idle: #00FF88;  --input_idle: #52626E;  --incorrect_input: red;
+	--incorrect_balloon_color: rgb(207, 16, 32);  --incorrect_balloon_background: rgba(247, 148, 137, 0.1);
+}
+
+body {	background-color: var(--background_shade);  width: all;  height: all;  background-repeat: repeat;  }
+
+#p_name{ position: absolute;  left: 20%;  top: 30%; }
+
+#p_name #title{ color: var(--first_layer);  font-size: 550%; }
+
+#line{	position: absolute;  width: 0.1%;  height: 28%;  left: 48%;  top: 35%;  background-color: var(--first_layer);  }
+
+#div_login{  position: absolute;  left: 50%;  top: 43%;  }
+
+#div_login table{  margin-left: 50%;  margin-top: -15%;  }
+
+#div_login input{  margin-bottom: 10%;  width: 250%;  height: 50px;   padding-left: 10%;   border-radius: 5%;   font-size: 150%; }
+
+#div_login input::placeholder { color: var(--first_layer);  opacity: 0.8; }
+
+#div_login #Username{ margin-top: -5%; }
+
+#div_login #Password{  }
+
+#div_login #b_login{
+	margin-left: 1.5%;  width: 260%; height: 50px;
+	border-radius: 4%;	border: 1px solid var(--button_idle);
+	color: var(--background_shade);	background-color: var(--button_idle);
+	font-size:  150%; font-weight: 30px;
+}
+
+#div_login #b_login:hover{
+	border: 2px solid var(--first_layer);  border-radius: 6%;
+	background-color: var(--first_layer);  color: var(--background_shade);
+	font-size:  150%;  font-weight: 30px;  cursor: pointer;
+}
+
+.add_text{ outline: none;  border-color: var(--first_layer); }
+
+.add_text_type_again{  outline: none;  border-color: var(--incorrect_input); }
+
+.incorrect_text{  color: var(--incorrect_input);  }
+
+.incorrect_type_again{  color: var(--first_layer);  }
+
+.incorrect{	 background-color: transparent;  border: 2px solid var(--incorrect_input);  }
+
+.default{  background-color: transparent;  color: var(--first_layer);  border: 2px solid var(--input_idle);  }
+
+.default_balloon{
+  	position: absolute;  left: 61.5%;  top: 65%;  z-index: 1;  width: 20%;  height: 6%;  font-size: 180%;
+  	color: var(--incorrect_balloon_color);  background-color: var(--incorrect_balloon_background);
+  	border-radius: 3%;  text-align: center;
+}
+
+.default_balloon p{  margin-top: 2.5%;  }
+
+.show_hidden{  visibility: hidden;  }
+
+.show_visible{  visibility: visible;  }

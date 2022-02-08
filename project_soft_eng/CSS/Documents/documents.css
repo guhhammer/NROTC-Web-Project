@@ -1,0 +1,71 @@
+#b_documents_options{
+	position: absolute;
+	top: 25%;
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	background: rgb(71,94,110);
+	background: linear-gradient(0deg, rgba(71,94,110,0.7346288857339811) 0%, rgba(40,52,60,0.9026961126247374) 16%, rgba(31,40,46,0.9783263647255778) 19%, rgba(20,25,28,0.9475140397956058) 81%, rgba(40,52,60,0.8382703423166141) 83%, rgba(71,94,110,0.8970938717283788) 96%);
+}
+
+#b_documents_options button{
+
+	border-radius: 20%;
+	height: 50px;
+	padding-left: 15px;
+	border-color: transparent;
+	background-color: #0CAE62;
+	cursor: pointer;
+}
+
+#b_documents_options table{
+	margin: 0 auto;
+}
+
+
+#b_documents_options #b_view{
+
+}
+
+#b_documents_options #b_edit{
+	
+}
+
+.documents-parent {
+	position: absolute;
+	top: 40%;
+	left: 5%;
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+    background-color: white;
+    width: 90%;
+    margin: 10px auto;
+    padding: 15px;
+}
+
+.documents-parent table {
+	width: 100%;
+}
+
+.directory-tree {
+	width: 20%;
+}
+
+.file-browser table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.file-browser table {
+	border: 1px solid black;
+}
+
+.file-browser th {
+	border: 1px solid black;
+}
+
+.file-browser td {
+	border: 1px solid black;
+}
+

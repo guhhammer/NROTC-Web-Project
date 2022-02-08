@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+
+		<title>GoNavy!</title>
+
+		<meta charset="utf-8">	
+
+		<link rel="icon" href="../../IMAGES/Tab_Icon/icon.PNG">
+
+		<link rel="stylesheet" type="text/css" href="../../CSS/Common/background.css?v=2">
+		<link rel="stylesheet" type="text/css" href="../../CSS/Common/header.css?v=3">
+		<link rel="stylesheet" type="text/css" href="../../CSS/Common/div_switch_pages.css?v=6">
+		<link rel="stylesheet" type="text/css" href="../../CSS/Training/training.css?v=3">
+
+		<script type="text/javascript" src="../../JAVASCRIPT/Jquery/Jquery.js"></script>
+		<script type="text/javascript" src="../../JAVASCRIPT/Headers/page_header.js?v=4"></script>
+		<script type="text/javascript" src="../../JAVASCRIPT/Headers/page_redirect_bar.js?v=6"></script>
+		<script type="text/javascript" src="../../JAVASCRIPT/Switch_Pages/Switch_Pages.js"></script>
+		<script type="text/javascript" src="../../JAVASCRIPT/Switch_Pages/Switch_Pages_Training.js"></script>
+
+	</head>	
+	<body>
+
+		
+		<!--CREATE TRAINING EVENT INPUT DATA -->
+		
+		<form class="training-parent" style="position: absolute; top: 35%;">
+
+		<!--SUB EVENTS -->
+		  <h2>Create Event</h2>		
+
+		<!--EVENT DATE -->
+		  <label for="eventDate">Date:</label>
+		  <input type="date" id="eventDate" name="eventDate"><br>
+		
+		<!--EVENT TYPE W/ DROPDOWN MENU-->
+		  <label for="eventType">Event Type:</label>
+		  <select id="eType">
+		  	<option value="USMC PFT">USMC PFT</option>
+		  	<option value="USMC CFT">USMC CFT</option>
+		  	<option value="USN PRT">USN PRT</option>
+		  	<option value="Volunteer">Volunteer</option>
+		  </select><br>
+		
+		<!--EVENT TTILE -->
+		  <label for="eventTitle">Event Title:</label>
+		  <input type="text" id="eventTitle" name="eventTitle"><br>
+		
+		<!--EVENT OWNER W/ DROPDOWN -->
+		  <label for="eventOwner">Event Owner:</label>
+		  <select id="eOwner">
+		  	<option value="Name1">Name1</option>
+		  	<option value="Name1">Name2</option>
+		  	<option value="Name1">Name3</option>
+		  </select><br>
+		
+		<!--EVENT NOTES-->
+		  <label for="notes">Notes:</label>
+		  <input type="text" id="notes" name="notes"><br>
+		
+		<!--EVENT DURATION-->
+		  <label for="duration">Duration:</label>
+		  <input type="text" id="Duration" name="Duration">
+
+		<!--SUB EVENTS -->
+		  <h3>Sub Events</h3>
+
+		<!--SUB EVENT 1 -->
+		  <label for="subEvent1Type">Sub Event 1 Type:</label>
+		  <select id="subEvent1Type">
+		  	<option value="timed">Timed</option>
+		  	<option value="count">Count</option>
+		  </select>
+		  <!--SUB EVENT 1 TITLE -->
+		  <label for="subEvent1Title">Title::</label>
+		  <input type="text" id="subEvent1Title" name="subEvent1Title"><br>
+
+		<!--SUB EVENT 2 -->
+		  <label for="subEvent2Type">Sub Event 2 Type:</label>
+		  <select id="subEvent2Type">
+		  	<option value="timed">Timed</option>
+		  	<option value="count">Count</option>
+		  </select>
+		  <!--SUB EVENT 2 TITLE -->
+		  <label for="subEvent2Title">Title::</label>	
+		  <input type="text" id="subEvent2Title" name="subEvent2Title"><br>
+
+		<!--SUB EVENT 3 -->
+		  <label for="subEvent3Type">Sub Event 3 Type:</label>
+		  <select id="subEvent3Type">
+		  	<option value="timed">Timed</option>
+		  	<option value="count">Count</option>
+		  </select>
+		  <!--SUB EVENT 3 TITLE -->
+		  <label for="subEvent3Title">Title::</label>	
+		  <input type="text" id="subEvent3Title" name="subEvent3Title"><br>
+
+		  <!--SUB EVENT ADD BUTTON -->
+		  <button>Add Sub Event</button><br><br>
+			
+		<!--SCORING TYPE -->
+		  <label for="scoreType">Scoring Typelabel>
+		  <select id="scoreType">
+			<option value="integer">Integer # </option>
+			<option value="single">Single #.# </option>
+			<option value="double">Double #.## </option>
+			<option value="passFail">Pass/Fail </option>
+		  </select><br>
+		
+		<!--PARTICIPANT LIMIT -->
+		  <label for="participantLimit">Participant Limit:</label>	
+  	      <label class="radio-inline"><input type="radio" name="particNoLimit" checked>No Limit</label>
+   	      <label class="radio-inline"><input type="radio" name="particLimited" checked>Limit</label>
+   	      <input type="text" id="participantLimit" name="participantLimit"><br>
+
+		<!--Billets -->
+		  <h3>Billets</h3>
+		
+		<!--Billet Title -->
+		  <label for="billetTitle">Billet Title: </label>	
+  	      <input type="billetTitle" id="billetTitle" name="billetTitle"><br>
+		  <label class="radio-inline"><input type="radio" name="userSignup" checked>User Sign-up </label>
+   	      <label class="radio-inline"><input type="radio" name="userAssigned" checked>Assigned </label>
+		  <select id="listNames">
+		  	<option value="Name1">Name1</option>
+		  	<option value="Name1">Name2</option>
+		  	<option value="Name1">Name3</option>
+		  </select><br>
+
+		  <!--SUB EVENT ADD BUTTON -->
+		  <button>Add Billet</button>
+		
+	</body>
+
+</html>

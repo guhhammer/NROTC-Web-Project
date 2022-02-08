@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+
+		<title>GoNavy!</title>
+
+		<meta charset="utf-8">	
+
+		<link rel="icon" href="../../IMAGES/Tab_Icon/icon.PNG">
+
+		<link rel="stylesheet" type="text/css" href="../../CSS/Common/background.css?v=2">
+		<link rel="stylesheet" type="text/css" href="../../CSS/Common/header.css?v=3">
+		<link rel="stylesheet" type="text/css" href="../../CSS/Common/div_switch_pages.css?v=6">
+		<link rel="stylesheet" type="text/css" href="../../CSS/Chits/chits.css?v=13">
+
+		<script type="text/javascript" src="../../JAVASCRIPT/Jquery/Jquery.js"></script>
+		<script type="text/javascript" src="../../JAVASCRIPT/Headers/page_header.js?v=4"></script>
+		<script type="text/javascript" src="../../JAVASCRIPT/Headers/page_redirect_bar.js?v=6"></script>
+		<script type="text/javascript" src="../../JAVASCRIPT/Switch_Pages/Switch_Pages.js"></script>
+		<script type="text/javascript" src="../../JAVASCRIPT/Switch_Pages/Switch_Pages_chits.js"></script>
+
+	</head>
+	<body>
+<!--Content-->
+		<!--CREATE CHIT FORM DATA -->
+		<form class="chits-parent" action="createchit.php" method="post" style="position: absolute; top: 35%;">
+
+		<!--CHIT REQUEST -->
+		 <h1>New Chit Request Submission</h1>
+
+		<!--CHIT DATE RANGE-->
+		  <label for="beginDateTime">Begin Date and Time:</label>
+		  <input type="datetime-local" id="beginDateTime" name="beginDateTime"><br> 
+
+		  <label for="endDateTime">End Date and Time:</label>
+		  <input type="datetime-local" id="endDateTime" name="endDateTime"><br> 
+		
+			<!--CHIT TYPE AS DROPDOWN MENU-->
+			  <label for="chitType">Chit Type:</label>
+			  <select id="chitType">
+			  	<option value="Not Wear Uniform">Not Wear Uniform</option>
+			  	<option value="Event Absence">Event Absence</option>
+			  	<option value="Miss PT">Miss PT</option>
+			  	<option value="Other">Other</option>
+			  </select><br>
+
+			<!--EVENTS AS DROPDOWN MENU-->
+			  <label for="event">Event:</label>
+			  <select id="event">
+			  	<!--TODO: GENERATE UPCOMING EVENTS-->
+			  	<option value="event1">PFT</option>
+			  	<option value="event2">PRT</option>
+			  	<option value="event3">CFT</option>
+			  	<option value="event4">March Drill</option>
+			  </select><br>
+
+			<!-- JUSTIFICATION -->
+			  <label for="justification">Justification:</label>
+			  <input type="text" id="justification" name="justification" size="100"><br>
+			
+			<!--TRAVEL INFO -->
+			  <div> 
+				  <label for="travelRequired">Travel Required?</label>	
+		  	      <label class="radio-inline"><input type="radio" name="travelReq" checked>No</label>
+	   		      <label class="radio-inline"><input type="radio" name="travelReq">Yes</label>
+	   		  </div>
+	   	      
+	   	      <fieldset>
+				  <legend>Travel Information</legend>
+				  <div><br>
+				  	<label for="modeTrans">Mode of transporation (Check all that apply)</label><br>
+
+				    <input type="checkbox" id="pov" name="travelMode" value="POV">
+				    <label for="pov">POV</label>
+				 
+				    <input type="checkbox" id="gov" name="travelMode" value="GOV">
+				    <label for="gov">GOV</label>
+				 
+				    <input type="checkbox" id="plane" name="travelMode" value="Plane">
+				    <label for="plane">Plane</label>
+				 
+				    <input type="checkbox" id="bus" name="travelMode" value="Bus">
+				    <label for="bus">Bus</label>
+				 
+				    <input type="checkbox" id="traing" name="travelMode" value="Train">
+				    <label for="train">Train</label>
+				 
+				    <input type="checkbox" id="ship" name="travelMode" value="Ship">
+				    <label for="ship">Ship</label><br><br>
+
+
+				    <label for="distance">Distance from unit:</label>
+		 		    <input type="number" id="distance" name="distance"  min="0" value="0" step="5">
+		 		    <label for="distance">miles</label><br><br>
+
+				    <label for="priPhone">Primary Phone:</label>
+		 		    <input type="tel" id="priPhone" name="priPhone" pattern="[0-9]{3}.[0-9]{3}.[0-9]{4}" placeholder="###.###.####"><br>
+				    <label for="priAddress">Primary Address:</label>
+		 		    <input type="text" id="priAddress" name="priAddress" size="50" placeholder="123 Main St., San Diego, CA 92131"><br> <br>
+
+				    <label for="altPhone">Alternate Phone:</label>
+		 		    <input type="tel" id="altPhone" name="altPhone" pattern="[0-9]{3}.[0-9]{3}.[0-9]{4}" placeholder="###.###.####"><br>
+				    <label for="altAddress">Alternate Address:</label>
+		 		    <input type="text" id="altAddress" name="altAddress" size="50" placeholder="123 Main St., San Diego, CA 92131"><br> <br>
+
+				  </div>
+				</fieldset>
+
+				<!--DOCUMENTATION -->
+			    <label for="documentation">Additional Documenation:</label>
+	 		    <input type="file" id="documentation" name="documentation" ><br><br>
+		 		
+		 		<!--SUBMIT -->
+			    <input type="submit" />
+
+		<!--	
+			<!- -EVENT OWNER W/ DROPDOWN - ->
+			  <label for="eventOwner">Event Owner:</label>
+			  <select id="eOwner">
+			  	<option value="Name1">Name1</option>
+			  	<option value="Name1">Name2</option>
+			  	<option value="Name1">Name3</option>
+			  </select><br>
+			
+			<!- -EVENT NOTES- ->
+			  <label for="notes">Notes:</label>
+			  <input type="text" id="notes" name="notes"><br>
+			
+			<!- -EVENT DURATION- ->
+			  <label for="duration">Duration:</label>
+			  <input type="text" id="Duration" name="Duration">
+
+			<!- -SUB EVENTS - ->
+			  <h3>Sub Events</h3>
+
+			<!- -SUB EVENT 1 - ->
+			  <label for="subEvent1Type">Sub Event 1 Type:</label>
+			  <select id="subEvent1Type">
+			  	<option value="timed">Timed</option>
+			  	<option value="count">Count</option>
+			  </select>
+			  <!- -SUB EVENT 1 TITLE - ->
+			  <label for="subEvent1Title">Title::</label>
+			  <input type="text" id="subEvent1Title" name="subEvent1Title"><br>
+
+			<!- -SUB EVENT 2 - ->
+			  <label for="subEvent2Type">Sub Event 2 Type:</label>
+			  <select id="subEvent2Type">
+			  	<option value="timed">Timed</option>
+			  	<option value="count">Count</option>
+			  </select>
+			  <!- -SUB EVENT 2 TITLE - ->
+			  <label for="subEvent2Title">Title::</label>	
+			  <input type="text" id="subEvent2Title" name="subEvent2Title"><br>
+
+			<!- -SUB EVENT 3 - ->
+			  <label for="subEvent3Type">Sub Event 3 Type:</label>
+			  <select id="subEvent3Type">
+			  	<option value="timed">Timed</option>
+			  	<option value="count">Count</option>
+			  </select>
+			  <!- -SUB EVENT 3 TITLE - ->
+			  <label for="subEvent3Title">Title::</label>	
+			  <input type="text" id="subEvent3Title" name="subEvent3Title"><br>
+
+			  <!- -SUB EVENT ADD BUTTON - ->
+			  <button>Add Sub Event</button><br><br>
+				
+			<!- -SCORING TYPE - ->
+			  <label for="scoreType">Scoring Typelabel>
+			  <select id="scoreType">
+				<option value="integer">Integer # </option>
+				<option value="single">Single #.# </option>
+				<option value="double">Double #.## </option>
+				<option value="passFail">Pass/Fail </option>
+			  </select><br>
+			
+			<!- -PARTICIPANT LIMIT - ->
+			  <label for="participantLimit">Participant Limit:</label>	
+	  	      <label class="radio-inline"><input type="radio" name="particNoLimit" checked>No Limit</label>
+	   	      <label class="radio-inline"><input type="radio" name="particLimited" checked>Limit</label>
+	   	      <input type="text" id="participantLimit" name="participantLimit"><br>
+
+			<!- -Billets - ->
+			  <h3>Billets</h3>
+			
+			<!- -Billet Title - ->
+			  <label for="billetTitle">Billet Title: </label>	
+	  	      <input type="billetTitle" id="billetTitle" name="billetTitle"><br>
+			  <label class="radio-inline"><input type="radio" name="userSignup" checked>User Sign-up </label>
+	   	      <label class="radio-inline"><input type="radio" name="userAssigned" checked>Assigned </label>
+			  <select id="listNames">
+			  	<option value="Name1">Name1</option>
+			  	<option value="Name1">Name2</option>
+			  	<option value="Name1">Name3</option>
+			  </select><br>
+
+			  <!- -SUB EVENT ADD BUTTON - ->
+			  <button>Submit Chit</button>
+		</div><!- - /.comment-out -->
+
+	</body>
+
+</html>

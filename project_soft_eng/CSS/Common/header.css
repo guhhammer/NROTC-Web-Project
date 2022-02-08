@@ -1,0 +1,16 @@
+
+html, body{  overflow-x: hidden; }
+
+#header{ margin-bottom: 1%; }
+
+#header #p_name{
+	position: absolute;
+	width: 100%;  margin-left: 5%;
+	font-size: 240%;  color: #04DC77;
+}
+
+#header #p_rank{
+	position: absolute; display: inline-block;  text-align: right; right: 10%;
+	width: 110%;  font-size: 220%;
+	color: #04DC77;
+}

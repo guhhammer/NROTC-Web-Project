@@ -1,0 +1,108 @@
+:root{ 
+	--bg_color: rgb(71,94,110);
+	--bg_linear: linear-gradient(0deg, rgba(71,94,110,0.7346288857339811) 0%, rgba(40,52,60,0.9026961126247374) 16%, rgba(31,40,46,0.9783263647255778) 19%, rgba(20,25,28,0.9475140397956058) 81%, rgba(40,52,60,0.8382703423166141) 83%, rgba(71,94,110,0.8970938717283788) 96%);
+	--bg_shade: transparent;
+	--bg_shade2: #0CAE62;
+	--table_grid_color: white;
+	--table_shade: lightgray;
+	--table_shade2: white;
+	--table_header: gray;
+	--td_border: #000000;
+}
+
+#b_chits_options{
+	position: absolute;
+	text-align: center;  display: inline-block;  margin: 0 auto; 
+	top: 25%; width: 100%;
+	background: var(--bg_color); background: var(--bg_linear);
+}
+
+#b_chits_options button{
+	border-radius: 20%;  padding-left: 15px;  height: 50px;
+	border-color: var(--bg_shade); background-color: var(--bg_shade2);
+	cursor: pointer;
+}
+
+#b_chits_options table{ margin: 0 auto; }
+
+#b_chits_options #b_my_chits{  }
+
+#b_chits_options #b_cmd_mgmt{  }
+
+#b_chits_options #b_create_chit{  }
+
+#pending_chits{ position: relative;  margin-top:  15%;  margin-left: 2%; }
+
+#pending_chits table {  border-collapse: collapse; }
+
+#pending_chits table{ border: 1px solid var(--table_grid_color);}
+
+#pending_chits th{	border: 1px solid var(--table_grid_color); }
+
+#pending_chits td{	border: 1px solid var(--table_grid_color); }
+
+#pending_chits tr:nth-child(odd){ background-color: var(--table_shade); }
+
+#pending_chits tr:nth-child(even){ background-color: var(--table_shade2); }
+
+#pending_chits #header{  background-color: var(--table_header);  align-self: center;  color: var(--table_shade2);  font-size: 20px; }
+
+#pending_chits #title{  color: var(--table_shade2);  font-size: 40px;  font-family: Arial;  }
+
+#pending_chits p{  font-size: 16px;  font-family: sans-serif;  }
+
+#pending_chits td{ border-bottom: 1px solid var(--td_border); }
+
+#completed_chits{  position: relative;	margin-left: 2%; }
+
+#completed_chits table { border-collapse: collapse; }
+
+#completed_chits table{  border: 1px solid var(--table_grid_color);  }
+
+#completed_chits th{  border: 1px solid var(--table_grid_color);  }
+
+#completed_chits td{  border: 1px solid var(--table_grid_color);  }
+
+#completed_chits tr:nth-child(odd){  background-color: var(--table_shade);  }
+
+#completed_chits tr:nth-child(even){  background-color: var(--table_shade2);  }
+
+#completed_chits #header{  background-color: var(--table_header); align-self: center; color: var(--table_shade2); font-size: 20px; }
+
+#completed_chits #title{  color: var(--table_shade2);  font-size: 40px;  font-family: Arial;  }
+
+#completed_chits p{  font-size: 16px;  font-family: sans-serif;  }
+
+#completed_chits td{  border-bottom: 1px solid var(--td_border);  }
+
+
+.chits-parent {
+	position: absolute;
+	top: 35%;
+	left: 4%;
+    background-color: white;
+    width: 90%;
+    margin: 10px auto;
+    padding: 15px;
+}
+
+.chits-parent table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.chits-parent table {
+	border: 1px solid black;
+}
+
+.chits-parent th {
+	border: 1px solid black;
+}
+
+.chits-parent td {
+	border: 1px solid black;
+}
+
+input[type=text] {
+	width: 98%;
+}

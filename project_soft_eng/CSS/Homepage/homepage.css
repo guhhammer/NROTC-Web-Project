@@ -1,0 +1,239 @@
+:root{
+	--shade1: #7A8F9F; --shade2: #24FF99;
+	--div_border_color: #000000; --underline: #000000; 
+	--focused: rgba(228, 228, 228, 0.7); --focused_first_layer: black;
+	--button_idle: #00FF88; --no_match_color: rgba(242, 71, 71, 0.6);
+	--link_password_color: blue;  --inactive_color: transparent;
+	--ffamily: sans-serif;
+}
+
+.unscrollable{  overflow: hidden;  } 
+
+.blurred{  filter: blur(3px);  }
+
+.home_div{
+	position: absolute; overflow: hidden;
+	border-radius: 10%; width: 27%;
+	border: 1px solid var(--div_border_color);
+	background-color: var(--shade1);
+}
+
+.title_c{
+	border-radius: 10%; padding: 20px 10px 20px 40px;
+	font-family: Arial;
+	border: 1px solid rgb(155,155,155,0.2);
+	background-color: var(--shade2);
+}
+
+#personal_info{ left: 6%; top: 30%; height: 60%; }
+
+#contact_info{ left: 6%; top: 95%; height: 75%; }
+
+#user_info{ left: 36%; top: 30%; height: 250px;}
+
+#command_info{ left: 36%; top: 65%; height: 100%; }
+
+#my_photo{ left: 66%; top: 30%; height: 54%; }
+
+#service_info{ left: 66%; top: 90%; height: 36%; }
+
+#academic_info{
+	left: 66%; top: 133%; height: 60%;
+	min-height: 20%; max-height: 80%;
+	overflow: hidden; margin-bottom: 5%;
+}
+
+#personal_info #title{ font-size: 130%; width: 50%; margin-left: 18%; }
+
+#contact_info #title{ font-size: 130%; width: 47%; margin-left: 20%; }
+
+#user_info #title{ font-size: 130%; width: 40%; margin-left: 25%; }
+
+#command_info #title{ font-size: 130%; width: 50%; margin-left: 20%; }
+
+#service_info #title{ font-size: 130%; width: 45%; margin-left: 22%; }
+
+#academic_info #title{ font-size: 130%; width: 50%; margin-left: 20%; }
+
+#personal_info p{ font-size: 16px; font-family: var(--ffamily); }
+
+#contact_info p{ font-size: 16px; font-family: var(--ffamily); }
+
+#user_info p{ font-size: 16px; font-family: var(--ffamily); }
+
+#command_info p{ font-size: 12px; }
+
+#service_info p{ font-size: 16px; font-family: var(--ffamily); }
+
+#academic_info p{ font-size: 12px; font-family: sans-serif; }
+
+#personal_info td{ border-bottom: 1px solid var(--underline); }
+
+#contact_info td{ border-bottom: 1px solid var(--underline); }
+
+#user_info td{ border-bottom: 1px solid var(--underline); }
+
+#command_info td{ border-bottom: 1px solid var(--underline); }
+
+#service_info td{ border-bottom: 1px solid var(--underline); }
+
+#academic_info td{ border-bottom: 1px solid var(--underline); }
+
+#command_info #chain{  font-size: 16px;  font-family: Arial;  margin-left: 13%;  }
+
+#my_photo #photo{  margin-top: 5%;  margin-bottom: -1%; }
+
+#my_photo #link{  font-size: 16px;  font-family: var(--ffamily);  margin-left: 45%;  }
+
+
+/* POP-UPs */
+.pop_up_click_initial_button{  background-color: var(--inactive_color);  border-color: var(--inactive_color); color: var(--link_password_color); }
+.pop_up_click_initial_button{  cursor: pointer; }
+
+.pop_up_overlay {
+	position: absolute; width: 27%; height: 30%; z-index: 1;
+	border: 3px solid var(--div_border_color);	border-radius: 10px;
+	visibility: hidden; background-color: var(--shade1);
+}
+
+.position1{  left: 37%;  top: 30%;  }
+
+.position2{  left: 37%;  top: 80%;  }
+
+.pop_up_overlay.active {  visibility: visible;  }
+
+.popup_content {  visibility: hidden;  }
+
+.popup_content.active {  visibility: visible;  }
+
+.pop_up_overlay input{
+	margin-top: 10%;  margin-bottom: 5%;  margin-left: 7.5%; 
+	width: 80%; height: 30px; padding-left: 10px;
+	border: 1px solid transparent;
+}
+
+.focused{  color: var(--focused_first_layer); background-color: var(--focused); font-size: 140%;  }
+
+.pop_up_overlay .second_input{  margin-top: -5%;  }
+
+.pop_up_overlay button{  width: 40%;  height: 40px;  z-index: 1; }
+
+.pop_up_overlay .first_button{
+	margin-top: 2.5%;  margin-left: 7.5%;
+  	border-radius: 10px;  border: 1px solid var(--button_idle);
+  	color: var(--shade1);  background-color: var(--shade2);
+  	font-size: 130%;
+}
+
+.pop_up_overlay .second_button{
+  	margin-left: 1%;  font-size: 130%;
+  	border-radius: 10px;  border: 1px solid var(--button_idle);
+  	color: var(--shade1);  background: var(--shade2);
+}
+
+.pop_up_overlay .first_button:hover {
+  	background-color: var(--shade2);  color: var(--focused_first_layer);
+  	border-radius: 30px;  cursor: pointer;
+}
+
+.pop_up_overlay .second_button:hover {
+  	background-color: var(--shade2);  color: var(--focused_first_layer);
+  	border-radius: 30px;  cursor: pointer;
+}
+
+.no_match{  background-color: var(--no_match_color);  }
+
+.pop_up_overlay_pp2 {
+	position: absolute;  left: 37%;  top: 80%;  width: 27%;  height: 33%;  z-index: 1;
+	visibility: hidden;  background-color: var(--shade1);
+	border: 3px solid var(--div_border_color);  border-radius: 10px;
+}
+
+.pop_up_overlay_pp2.active {  visibility: visible; }
+
+.popup_content_pp2 {  visibility: hidden; }
+
+.popup_content_pp2.active {  visibility: visible; }
+
+.pop_up_overlay_pp2 p{	position: absolute;  margin-top: 6%;  margin-left: 15%;  border: 1px solid transparent; }
+
+.select_oc{
+	position: absolute;  display: block;  -webkit-appearance: none;
+	margin-left: 35%;  margin-top: 5%;  width: 10%; height: 12%; padding-left: 10px;
+}
+
+#street_id{	position: absolute;  margin-left: 5%;  margin-top: 15%; width: 85%; height: 10%; padding-left: 10px; }
+
+#apt_id{ position: absolute;  margin-left: 63%;  margin-top: 35%;  width: 27%;  height: 10%;  padding-left: 10px; }
+
+#city_id{  position: absolute;  margin-left: 5%;  margin-top: 25%;  width: 85%;  height: 10%;  padding-left: 10px;  }
+
+#state_id{	position: absolute;  margin-left: 5%;  margin-top: 35%;  width: 20%;  height: 10%;  padding-left: 10px;  }
+
+#zip_id{  position: absolute;  margin-left: 33%;  margin-top: 35%;  width: 23%;  height: 10%;  padding-left: 10px; }
+
+.pop_up_overlay_pp2 button{	width: 40%;	height: 40px; z-index: 1; }
+
+.pop_up_overlay_pp2 .first_button_pp2{
+	position: absolute;  margin-left: 7%;  margin-top: 45%;
+  	border: 1px solid var(--button_idle);  border-radius: 10px;  font-size: 130%;
+  	color: var(--shade1);  background-color: var(--shade2);
+}
+
+.pop_up_overlay_pp2 .second_button_pp2{
+  	position: absolute;  margin-left: 50%;  margin-top: 45%;
+	border: 1px solid var(--button_idle);  border-radius: 10px;  font-size: 130%;
+  	color: var(--shade1);  	background: var(--shade2);
+}
+
+.pop_up_overlay_pp2 .first_button_pp2:hover {  background-color: var(--shade2); color: var(--focused_first_layer); cursor: pointer; border-radius: 30px;  }
+
+.pop_up_overlay_pp2 .second_button_pp2:hover { background-color: var(--shade2);  color: var(--focused_first_layer);  cursor: pointer;  border-radius: 30px;  }
+
+.pop_up_overlay_pp3 {
+	position: absolute; width: 25%; height: 25%; z-index: 1;
+	border: 3px solid var(--div_border_color);	border-radius: 10px;
+	visibility: hidden; background-color: var(--shade1);
+}
+
+.position3{  left: 36.5%;  top: 45%;  }
+
+.position4{  left: 36.5%;  top: 150%;  }
+
+.pop_up_overlay_pp3.active {  visibility: visible;  }
+
+.popup_content_pp3 {  visibility: hidden;  }
+
+.popup_content_pp3.active {  visibility: visible;  }
+
+.pop_up_overlay_pp3 button{  width: 40%;  height: 40px;  z-index: 1; }
+
+.pop_up_overlay_pp3 .first_button{
+	margin-top: 2.5%;  margin-left: 15%; width: 20%;
+  	border-radius: 10px;  border: 1px solid var(--button_idle);
+  	color: var(--shade1);  background-color: var(--shade2);
+  	font-size: 130%;
+}
+
+.pop_up_overlay_pp3 .second_button{
+  	margin-left: 5%;  font-size: 130%; width: 50%;
+  	border-radius: 10px;  border: 1px solid var(--button_idle);
+  	color: var(--shade1);  background: var(--shade2);
+}
+
+.pop_up_overlay_pp3 .first_button:hover {
+  	background-color: var(--shade2);  color: var(--focused_first_layer);
+  	border-radius: 30px;  cursor: pointer;
+}
+
+.pop_up_overlay_pp3 .second_button:hover {
+  	background-color: var(--shade2);  color: var(--focused_first_layer);
+  	border-radius: 30px;  cursor: pointer;
+}
+
+.file_input{  margin-left: 15%;  margin-top: 10%;  margin-bottom: 5%;  width: 75%;  height: 25%;  }
+
+.pop_up_overlay_pp3 input:hover{
+	background-color: var(--shade2);  color: var(--focused_first_layer);
+  	border-radius: 30px;  cursor: pointer;
+}

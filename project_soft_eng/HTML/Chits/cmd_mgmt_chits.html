@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+
+		<title>GoNavy!</title>
+
+		<meta charset="utf-8">	
+
+		<link rel="icon" href="../../IMAGES/Tab_Icon/icon.PNG">
+
+		<link rel="stylesheet" type="text/css" href="../../CSS/Common/background.css?v=2">
+		<link rel="stylesheet" type="text/css" href="../../CSS/Common/header.css?v=3">
+		<link rel="stylesheet" type="text/css" href="../../CSS/Common/div_switch_pages.css?v=6">
+		<link rel="stylesheet" type="text/css" href="../../CSS/Chits/chits.css?v=13">
+
+		<script type="text/javascript" src="../../JAVASCRIPT/Jquery/Jquery.js"></script>
+		<script type="text/javascript" src="../../JAVASCRIPT/Headers/page_header.js?v=5"></script>
+		<script type="text/javascript" src="../../JAVASCRIPT/Headers/page_redirect_bar.js?v=8"></script>		
+		<script type="text/javascript" src="../../JAVASCRIPT/Switch_Pages/Switch_Pages.js"></script>
+		<script type="text/javascript" src="../../JAVASCRIPT/Switch_Pages/Switch_Pages_chits.js"></script>
+		<script type="text/javascript" src="../../JAVASCRIPT/Chits/cmd_mgmt_chits.js"></script>
+
+	</head>
+	<body>
+		<!--Content-->
+		<div class="chits-parent">
+			<h1>Chits Awaiting My Action</h1>
+			<table>
+				<thead>
+					<tr>
+						<th>Actions			</th>
+						<th>Chit ID 		</th>
+						<th>Chit Type 		</th>
+						<th>Routing Status 	</th>
+						<th>AW Action By 	</th>
+						<th>Last Action By 	</th>
+						<th>Last Action 	</th>
+						<th>Last Comment 	</th>
+					</tr>
+				</thead>
+				<tbody data-bind='foreach: entries'>
+					<tr>
+						<td><a href="#" data-bind='click: $root.viewChit'>View</a> / <a href="#" data-bind='click: $root.editChit'>Edit</a></td>
+						<td data-bind='text: chitID'></td>
+						<td data-bind='text: chitType'></td>
+						<td data-bind='text: status'></td>
+						<td data-bind='text: awAction'></td>
+						<td data-bind='text: lastCommentBy'></td>
+						<td data-bind='text: lastAction'></td>
+						<td data-bind='text: lastComment'></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h1>My Command Completed Chits</h1>
+			<table>
+				<thead>
+					<tr>
+						<th>Actions			</th>
+						<th>Chit ID 		</th>
+						<th>Chit Type 		</th>
+						<th>Routing Status 	</th>
+						<th>AW Action By 	</th>
+						<th>Last Action By 	</th>
+						<th>Last Action 	</th>
+						<th>Last Comment 	</th>
+					</tr>
+				</thead>
+				<tbody data-bind='foreach: entries'>
+					<tr>
+						<td><a href="#" data-bind='click: $root.viewChit'>View</a> / <a href="#" data-bind='click: $root.editChit'>Edit</a></td>
+						<td data-bind='text: chitID'></td>
+						<td data-bind='text: chitType'></td>
+						<td data-bind='text: status'></td>
+						<td data-bind='text: awAction'></td>
+						<td data-bind='text: lastCommentBy'></td>
+						<td data-bind='text: lastAction'></td>
+						<td data-bind='text: lastComment'></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<!--Reset Password Modal- ->
+		<div id="dialog-message" title="View Chit Details">
+			<p>
+				Chit ID: <span data-bind="text: chitID"></span>
+			</p>
+			<p>
+				Details Here (working): <span data-bind="text: chitType"></span>
+			</p>
+		</div-->
+
+	</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+
+		<title>GoNavy!</title>
+
+		<meta charset="utf-8">	
+
+		<link rel="icon" href="../../IMAGES/Tab_Icon/icon.PNG">
+		
+		<link rel="stylesheet" type="text/css" href="../../CSS/Common/background.css?v=2">
+		<link rel="stylesheet" type="text/css" href="../../CSS/Common/header.css?v=3">
+		<link rel="stylesheet" type="text/css" href="../../CSS/Common/div_switch_pages.css?v=6">
+		<link rel="stylesheet" type="text/css" href="../../CSS/Documents/documents.css?v=3">
+
+		<script type="text/javascript" src="../../JAVASCRIPT/Jquery/Jquery.js"></script>
+		<script type="text/javascript" src="../../JAVASCRIPT/Headers/page_header.js?v=4"></script>
+		<script type="text/javascript" src="../../JAVASCRIPT/Headers/page_redirect_bar.js?v=8"></script>
+		<script type="text/javascript" src="../../JAVASCRIPT/Switch_Pages/Switch_Pages.js"></script>
+		<script type="text/javascript" src="../../JAVASCRIPT/Switch_Pages/Switch_Pages_Documents.js"></script>
+		<script type="text/javascript" src="../../JAVASCRIPT/Knockout/knockout-3.5.1.js"></script>
+		<script type="text/javascript" src="../../JAVASCRIPT/Documents/documents.js"></script>
+		
+	</head>
+	
+	<body>
+
+		<!--Content-->
+		<div class="documents-parent">
+			<table>
+				<tr>
+					<td class="directory-tree">
+						<script type="text/html" id="node">
+							<li>
+								<span><a href="#" data-bind="text: name, click: $root.changeDirectory"></a></span>
+								<ul data-bind="template: { name: 'node', foreach: directories }" />
+							</li>
+						</script>
+							
+						<ul data-bind="template: { name: 'node', foreach: entries.directories }"></ul>
+					</td>
+					<td class="file-browser">
+						Current Directory: <span data-bind="text: currentDirectory"></span><br />
+						<table>
+							<thead>
+								<tr>
+									<td>Name</td>
+									<td>Date</td>
+									<td>Size</td>
+									<td>Uploaded By</td>
+									<td>Download</td>
+								</tr>
+							</thead>
+							<tbody data-bind='foreach: currentFiles'>
+								<tr>
+									<td data-bind='text: name'></td>
+									<td data-bind='text: date'></td>
+									<td data-bind='text: size'></td>
+									<td data-bind='text: uploadedby'></td>
+									<td><a data-bind='attr: {href: url}'>Download</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+
+
+
+	</body>
+
+</html>
